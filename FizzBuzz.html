@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #ans{
+            background-color:pink;
+            width: 330px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-left: 30%;">
+        <h2>FizzBuzz Game</h2> 
+        <div class="card" style="width: 300px">
+            <img class="card-img-top" src="R:\Newton\HTML\Js\fizzbuzz.png" alt="FizzBuzz" style="width:100%">
+
+            <div class="card-body">
+                <h4 class="card-title">FizzBuzz</h4>
+                <p class="card-text">If Number is divisible by 3 - Fizz or 5 - Buzz or divisible by 3 and 5 - FizzBuzz</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-left: 30%;">
+        <label for="num">Input Number</label>
+        <input type="number" name="num" id="num">
+        <button class="btn btn-primary" onclick="fizzbuzz()">Check</button>
+    </div><br><br>
+
+    <div class="container" style="margin-left: 30%;" id="answer">
+        <p id="ans"></p>
+    </div>
+
+
+    <script>
+
+        function fizzbuzz(){
+
+            let n=document.getElementById('num').value;
+
+            if((n%3==0) && (n%5==0)){
+                let FizzBuzzAns = "FizzBuzz";
+                let res = FizzBuzzAns.fontsize(10);
+               // document.getElementById('answer').style.backgroundColor = "lightgreen";
+                document.getElementById('ans').innerHTML = res;
+
+            }
+            else if(n%3==0){
+                let FizzAns = "Fizz";
+                let res1 = FizzAns.fontsize(10);
+               // document.getElementById('answer').style.backgroundColor = "lightgreen";
+                document.getElementById('ans').innerHTML = res1;
+            }
+            else if(n%5==0){
+                let BuzzAns = "Buzz";
+                let res2 = BuzzAns.fontsize(10);
+               // document.getElementById('answer').style.backgroundColor = "lightgreen";
+                document.getElementById('ans').innerHTML = res2;
+            }
+            else{
+                let ans = "Enter a Number which is divisible by 3 & 5";
+                let res3=ans.fontsize(10);
+               // document.getElementById('answer').style.backgroundColor = "red";
+                document.getElementById('ans').innerHTML = res3;
+            }
+        }
+
+    </script>
+</body>
+</html>
